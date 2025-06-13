@@ -173,6 +173,7 @@ class SimpleEpitran(object):
             if m:
                 source = m.group(0)
                 try:
+                    print(self.g2p[source])
                     target = self.g2p[source][0]
                 except KeyError:
                     logger.debug("source = '%s''", source)
